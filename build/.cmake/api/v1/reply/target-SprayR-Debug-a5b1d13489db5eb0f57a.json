@@ -1,0 +1,1178 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "Debug/SprayR.exe"
+		},
+		{
+			"path" : "Debug/SprayR.pdb"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"set_target_properties",
+			"include",
+			"find_package",
+			"find_dependency",
+			"_qt_internal_find_qt_dependencies",
+			"set_property"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt",
+			"E:/CodesE/VTK/lib/cmake/vtk-9.2/VTK-targets.cmake",
+			"E:/CodesE/VTK/lib/cmake/vtk-9.2/vtk-config.cmake",
+			"E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake",
+			"E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake",
+			"E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6/Qt6Config.cmake",
+			"E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreTargets.cmake",
+			"E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake",
+			"D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake",
+			"E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
+			"E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake",
+			"E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake",
+			"E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake",
+			"E:/CodesE/OCCT/INSTALL/cmake/OpenCASCADEVisualizationTargets.cmake",
+			"E:/CodesE/OCCT/INSTALL/cmake/OpenCASCADEConfig.cmake",
+			"E:/CodesE/OCCT/INSTALL/cmake/OpenCASCADEDataExchangeTargets.cmake",
+			"E:/CodesE/OCCT/INSTALL/cmake/OpenCASCADEApplicationFrameworkTargets.cmake",
+			"E:/CodesE/OCCT/INSTALL/cmake/OpenCASCADEModelingDataTargets.cmake",
+			"E:/CodesE/OCCT/INSTALL/cmake/OpenCASCADEFoundationClassesTargets.cmake",
+			"E:/CodesE/OCCT/INSTALL/cmake/OpenCASCADECompileDefinitionsAndFlags-debug.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 36,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 47,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 14,
+				"parent" : 0
+			},
+			{
+				"file" : 2,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 138,
+				"parent" : 4
+			},
+			{
+				"file" : 1,
+				"parent" : 5
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 628,
+				"parent" : 6
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 7,
+				"parent" : 0
+			},
+			{
+				"file" : 5,
+				"parent" : 8
+			},
+			{
+				"command" : 4,
+				"file" : 5,
+				"line" : 157,
+				"parent" : 9
+			},
+			{
+				"file" : 4,
+				"parent" : 10
+			},
+			{
+				"command" : 3,
+				"file" : 4,
+				"line" : 52,
+				"parent" : 11
+			},
+			{
+				"file" : 3,
+				"parent" : 12
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 61,
+				"parent" : 13
+			},
+			{
+				"command" : 3,
+				"file" : 4,
+				"line" : 40,
+				"parent" : 11
+			},
+			{
+				"file" : 10,
+				"parent" : 15
+			},
+			{
+				"command" : 6,
+				"file" : 10,
+				"line" : 39,
+				"parent" : 16
+			},
+			{
+				"command" : 5,
+				"file" : 9,
+				"line" : 108,
+				"parent" : 17
+			},
+			{
+				"command" : 4,
+				"file" : 8,
+				"line" : 76,
+				"parent" : 18
+			},
+			{
+				"file" : 7,
+				"parent" : 19
+			},
+			{
+				"command" : 3,
+				"file" : 7,
+				"line" : 52,
+				"parent" : 20
+			},
+			{
+				"file" : 6,
+				"parent" : 21
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 61,
+				"parent" : 22
+			},
+			{
+				"command" : 5,
+				"file" : 9,
+				"line" : 108,
+				"parent" : 17
+			},
+			{
+				"command" : 4,
+				"file" : 8,
+				"line" : 76,
+				"parent" : 24
+			},
+			{
+				"file" : 12,
+				"parent" : 25
+			},
+			{
+				"command" : 3,
+				"file" : 12,
+				"line" : 52,
+				"parent" : 26
+			},
+			{
+				"file" : 11,
+				"parent" : 27
+			},
+			{
+				"command" : 2,
+				"file" : 11,
+				"line" : 61,
+				"parent" : 28
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 852,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 349,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 322,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 779,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 377,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 368,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 620,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 274,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 250,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 200,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 119,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 94,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 144,
+				"parent" : 6
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 11,
+				"parent" : 0
+			},
+			{
+				"file" : 14,
+				"parent" : 43
+			},
+			{
+				"command" : 3,
+				"file" : 14,
+				"line" : 102,
+				"parent" : 44
+			},
+			{
+				"file" : 13,
+				"parent" : 45
+			},
+			{
+				"command" : 2,
+				"file" : 13,
+				"line" : 77,
+				"parent" : 46
+			},
+			{
+				"command" : 3,
+				"file" : 14,
+				"line" : 102,
+				"parent" : 44
+			},
+			{
+				"file" : 15,
+				"parent" : 48
+			},
+			{
+				"command" : 2,
+				"file" : 15,
+				"line" : 75,
+				"parent" : 49
+			},
+			{
+				"command" : 2,
+				"file" : 15,
+				"line" : 83,
+				"parent" : 49
+			},
+			{
+				"command" : 2,
+				"file" : 13,
+				"line" : 68,
+				"parent" : 46
+			},
+			{
+				"command" : 2,
+				"file" : 13,
+				"line" : 59,
+				"parent" : 46
+			},
+			{
+				"command" : 2,
+				"file" : 15,
+				"line" : 91,
+				"parent" : 49
+			},
+			{
+				"command" : 3,
+				"file" : 14,
+				"line" : 102,
+				"parent" : 44
+			},
+			{
+				"file" : 16,
+				"parent" : 55
+			},
+			{
+				"command" : 2,
+				"file" : 16,
+				"line" : 75,
+				"parent" : 56
+			},
+			{
+				"command" : 3,
+				"file" : 14,
+				"line" : 102,
+				"parent" : 44
+			},
+			{
+				"file" : 17,
+				"parent" : 58
+			},
+			{
+				"command" : 2,
+				"file" : 17,
+				"line" : 83,
+				"parent" : 59
+			},
+			{
+				"command" : 3,
+				"file" : 14,
+				"line" : 102,
+				"parent" : 44
+			},
+			{
+				"file" : 18,
+				"parent" : 61
+			},
+			{
+				"command" : 2,
+				"file" : 18,
+				"line" : 59,
+				"parent" : 62
+			},
+			{
+				"command" : 3,
+				"file" : 14,
+				"line" : 86,
+				"parent" : 44
+			},
+			{
+				"file" : 19,
+				"parent" : 64
+			},
+			{
+				"command" : 7,
+				"file" : 19,
+				"line" : 17,
+				"parent" : 65
+			},
+			{
+				"command" : 7,
+				"file" : 19,
+				"line" : 19,
+				"parent" : 65
+			},
+			{
+				"command" : 7,
+				"file" : 19,
+				"line" : 22,
+				"parent" : 65
+			},
+			{
+				"command" : 7,
+				"file" : 19,
+				"line" : 18,
+				"parent" : 65
+			},
+			{
+				"command" : 7,
+				"file" : 19,
+				"line" : 16,
+				"parent" : 65
+			},
+			{
+				"command" : 7,
+				"file" : 19,
+				"line" : 14,
+				"parent" : 65
+			},
+			{
+				"command" : 7,
+				"file" : 19,
+				"line" : 23,
+				"parent" : 65
+			},
+			{
+				"command" : 7,
+				"file" : 19,
+				"line" : 21,
+				"parent" : 65
+			},
+			{
+				"command" : 7,
+				"file" : 19,
+				"line" : 20,
+				"parent" : 65
+			},
+			{
+				"command" : 7,
+				"file" : 19,
+				"line" : 15,
+				"parent" : 65
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++17 -MDd -Zi"
+				},
+				{
+					"backtrace" : 2,
+					"fragment" : "-Zc:__cplusplus"
+				},
+				{
+					"backtrace" : 2,
+					"fragment" : "-permissive-"
+				},
+				{
+					"backtrace" : 2,
+					"fragment" : "-utf-8"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 66,
+					"define" : "HAVE_FREETYPE"
+				},
+				{
+					"backtrace" : 67,
+					"define" : "HAVE_OPENGL_EXT"
+				},
+				{
+					"backtrace" : 68,
+					"define" : "HAVE_TK"
+				},
+				{
+					"backtrace" : 69,
+					"define" : "HAVE_VTK"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "KISSFFT_DLL_IMPORT=1"
+				},
+				{
+					"backtrace" : 70,
+					"define" : "OCCT_DEBUG"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "QT_CORE_LIB"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "QT_GUI_LIB"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "QT_OPENGLWIDGETS_LIB"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "QT_OPENGL_LIB"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "QT_WIDGETS_LIB"
+				},
+				{
+					"backtrace" : 71,
+					"define" : "UNICODE"
+				},
+				{
+					"backtrace" : 72,
+					"define" : "VTK_OPENGL2_BACKEND"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "WIN32"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "WIN64"
+				},
+				{
+					"backtrace" : 73,
+					"define" : "_CRT_NONSTDC_NO_DEPRECATE"
+				},
+				{
+					"backtrace" : 74,
+					"define" : "_CRT_SECURE_NO_WARNINGS"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "_ENABLE_EXTENDED_ALIGNED_STORAGE"
+				},
+				{
+					"backtrace" : 75,
+					"define" : "_UNICODE"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "_WIN64"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "kiss_fft_scalar=double"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 0,
+					"isSystem" : true,
+					"path" : "E:/CodesE/SprayR/clion/build/SprayR_autogen/include_Debug"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "E:/CodesE/VTK/include/vtk-9.2"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "E:/Qt/6.4.3/msvc2019_64/include/QtOpenGL"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "E:/Qt/6.4.3/msvc2019_64/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "E:/Qt/6.4.3/msvc2019_64/include/QtCore"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "E:/Qt/6.4.3/msvc2019_64/mkspecs/win32-msvc"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "E:/Qt/6.4.3/msvc2019_64/include/QtGui"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "E:/Qt/6.4.3/msvc2019_64/include/QtWidgets"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "E:/Qt/6.4.3/msvc2019_64/include/QtOpenGLWidgets"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "E:/CodesE/VTK/include/vtk-9.2/vtknlohmannjson/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "E:/CodesE/VTK/include/vtk-9.2/vtkfreetype/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "E:/CodesE/OCCT/INSTALL/inc"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					2,
+					2,
+					2
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				5,
+				7,
+				9
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "SprayR::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "/DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -MDd -Zi",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:console",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-LIBPATH:E:\\CodesE\\OCCT\\3rdparty\\freetype-2.13.3-x64\\lib",
+				"role" : "libraryPath"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkGUISupportQt-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkIOGeometry-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkRenderingContextOpenGL2-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkInteractionWidgets-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\Qt\\6.4.3\\msvc2019_64\\lib\\Qt6OpenGLWidgetsd.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\CodesE\\OCCT\\INSTALL\\win64\\vc14\\libd\\TKOpenGl.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\CodesE\\OCCT\\INSTALL\\win64\\vc14\\libd\\TKDESTEP.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\CodesE\\OCCT\\INSTALL\\win64\\vc14\\libd\\TKDEIGES.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkInteractionStyle-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkRenderingAnnotation-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\Qt\\6.4.3\\msvc2019_64\\lib\\Qt6Widgetsd.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "E:\\Qt\\6.4.3\\msvc2019_64\\lib\\Qt6OpenGLd.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 14,
+				"fragment" : "E:\\Qt\\6.4.3\\msvc2019_64\\lib\\Qt6Guid.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 14,
+				"fragment" : "E:\\Qt\\6.4.3\\msvc2019_64\\lib\\Qt6Cored.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 23,
+				"fragment" : "mpr.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 23,
+				"fragment" : "userenv.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 29,
+				"fragment" : "d3d11.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 29,
+				"fragment" : "dxgi.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 29,
+				"fragment" : "dxguid.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 30,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkIOLegacy-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 30,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkIOCore-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkRenderingOpenGL2-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 31,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkRenderingHyperTreeGrid-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 31,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkRenderingUI-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 31,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkglew-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 32,
+				"fragment" : "opengl32.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 33,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkRenderingContext2D-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkRenderingFreeType-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 34,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkfreetype-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 35,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkzlib-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkRenderingCore-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkCommonColor-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 36,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkFiltersSources-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 31,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkFiltersGeneral-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 37,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkFiltersCore-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 30,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkCommonExecutionModel-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 30,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkCommonDataModel-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 38,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkCommonMisc-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 39,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkCommonTransforms-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 37,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkCommonMath-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkCommonCore-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 40,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtksys-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 41,
+				"fragment" : "ws2_32.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 41,
+				"fragment" : "dbghelp.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 41,
+				"fragment" : "psapi.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 42,
+				"fragment" : "E:\\CodesE\\VTK\\lib\\vtkkissfft-9.2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 47,
+				"fragment" : "opengl32.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 50,
+				"fragment" : "E:\\CodesE\\OCCT\\INSTALL\\win64\\vc14\\libd\\TKDE.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 50,
+				"fragment" : "E:\\CodesE\\OCCT\\INSTALL\\win64\\vc14\\libd\\TKXSBase.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 50,
+				"fragment" : "E:\\CodesE\\OCCT\\INSTALL\\win64\\vc14\\libd\\TKXCAF.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 51,
+				"fragment" : "E:\\CodesE\\OCCT\\INSTALL\\win64\\vc14\\libd\\TKVCAF.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\CodesE\\OCCT\\INSTALL\\win64\\vc14\\libd\\TKV3d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 52,
+				"fragment" : "E:\\CodesE\\OCCT\\INSTALL\\win64\\vc14\\libd\\TKMesh.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 52,
+				"fragment" : "E:\\CodesE\\OCCT\\INSTALL\\win64\\vc14\\libd\\TKHLR.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 52,
+				"fragment" : "E:\\CodesE\\OCCT\\INSTALL\\win64\\vc14\\libd\\TKService.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 53,
+				"fragment" : "windowscodecs.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 52,
+				"fragment" : "freetype.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 53,
+				"fragment" : "winmm.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 50,
+				"fragment" : "E:\\CodesE\\OCCT\\INSTALL\\win64\\vc14\\libd\\TKCAF.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 50,
+				"fragment" : "E:\\CodesE\\OCCT\\INSTALL\\win64\\vc14\\libd\\TKLCAF.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 50,
+				"fragment" : "E:\\CodesE\\OCCT\\INSTALL\\win64\\vc14\\libd\\TKCDF.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 54,
+				"fragment" : "E:\\CodesE\\OCCT\\INSTALL\\win64\\vc14\\libd\\TKBool.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 57,
+				"fragment" : "E:\\CodesE\\OCCT\\INSTALL\\win64\\vc14\\libd\\TKBO.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\CodesE\\OCCT\\INSTALL\\win64\\vc14\\libd\\TKPrim.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 52,
+				"fragment" : "E:\\CodesE\\OCCT\\INSTALL\\win64\\vc14\\libd\\TKShHealing.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 52,
+				"fragment" : "E:\\CodesE\\OCCT\\INSTALL\\win64\\vc14\\libd\\TKTopAlgo.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 52,
+				"fragment" : "E:\\CodesE\\OCCT\\INSTALL\\win64\\vc14\\libd\\TKGeomAlgo.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\CodesE\\OCCT\\INSTALL\\win64\\vc14\\libd\\TKBRep.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\CodesE\\OCCT\\INSTALL\\win64\\vc14\\libd\\TKGeomBase.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 60,
+				"fragment" : "E:\\CodesE\\OCCT\\INSTALL\\win64\\vc14\\libd\\TKG3d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 60,
+				"fragment" : "E:\\CodesE\\OCCT\\INSTALL\\win64\\vc14\\libd\\TKG2d.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\CodesE\\OCCT\\INSTALL\\win64\\vc14\\libd\\TKMath.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\CodesE\\OCCT\\INSTALL\\win64\\vc14\\libd\\TKernel.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 63,
+				"fragment" : "advapi32.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 63,
+				"fragment" : "gdi32.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 63,
+				"fragment" : "user32.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 63,
+				"fragment" : "wsock32.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 63,
+				"fragment" : "psapi.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "SprayR",
+	"nameOnDisk" : "SprayR.exe",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				5,
+				7,
+				9
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				3,
+				4,
+				6,
+				8
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/SprayR_autogen/mocs_compilation_Debug.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "main.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "SprayR_GUI.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "SprayR_GUI.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "VTKViewer.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "VTKViewer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "OCCHandler.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "OCCHandler.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "FaceProcessor.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "FaceProcessor.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

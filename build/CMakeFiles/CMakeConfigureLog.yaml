@@ -1,0 +1,613 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:211 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.10+8b8e13593
+      鐢熸垚鍚姩鏃堕棿涓?2025/6/3 15:08:27銆?
+      
+      鑺傜偣 1 涓婄殑椤圭洰鈥淓:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\3.27.7\\CompilerIdC\\CompilerIdC.vcxproj鈥?榛樿鐩爣)銆?
+      PrepareForBuild:
+        姝ｅ湪鍒涘缓鐩綍鈥淒ebug\\鈥濄€?
+        宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
+        姝ｅ湪鍒涘缓鐩綍鈥淒ebug\\CompilerIdC.tlog\\鈥濄€?
+      InitializeBuildStatus:
+        姝ｅ湪鍒涘缓鈥淒ebug\\CompilerIdC.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+        姝ｅ湪瀵光€淒ebug\\CompilerIdC.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+      VcpkgTripletSelection:
+        Using triplet "x64-windows" from "E:\\CodesE\\vcpkg\\installed\\x64-windows\\"
+        Using normalized configuration "Release"
+      ClCompile:
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"E:\\CodesE\\vcpkg\\installed\\x64-windows\\include" /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"E:\\CodesE\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"E:\\CodesE\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "E:\\CodesE\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\3.27.7\\CompilerIdC\\CompilerIdC.exe
+      AppLocalFromInstalled:
+        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "E:\\CodesE\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\3.27.7\\CompilerIdC\\CompilerIdC.exe" "E:\\CodesE\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+        'pwsh.exe' 涓嶆槸鍐呴儴鎴栧閮ㄥ懡浠わ紝涔熶笉鏄彲杩愯鐨勭▼搴?
+        鎴栨壒澶勭悊鏂囦欢銆?
+        鍛戒护鈥減wsh.exe -ExecutionPolicy Bypass -noprofile -File "E:\\CodesE\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\3.27.7\\CompilerIdC\\CompilerIdC.exe" "E:\\CodesE\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"鈥濆凡閫€鍑猴紝浠ｇ爜涓?9009銆?
+        "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "E:\\CodesE\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\3.27.7\\CompilerIdC\\CompilerIdC.exe" "E:\\CodesE\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        姝ｅ湪鍒犻櫎鏂囦欢鈥淒ebug\\CompilerIdC.tlog\\unsuccessfulbuild鈥濄€?
+        姝ｅ湪瀵光€淒ebug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
+      宸插畬鎴愮敓鎴愰」鐩€淓:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\3.27.7\\CompilerIdC\\CompilerIdC.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+      
+      宸叉垚鍔熺敓鎴愩€?
+          0 涓鍛?
+          0 涓敊璇?
+      
+      宸茬敤鏃堕棿 00:00:03.07
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        E:/CodesE/SprayR/clion/build/CMakeFiles/3.27.7/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.10+8b8e13593
+      鐢熸垚鍚姩鏃堕棿涓?2025/6/3 15:08:31銆?
+      
+      鑺傜偣 1 涓婄殑椤圭洰鈥淓:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\3.27.7\\CompilerIdCXX\\CompilerIdCXX.vcxproj鈥?榛樿鐩爣)銆?
+      PrepareForBuild:
+        姝ｅ湪鍒涘缓鐩綍鈥淒ebug\\鈥濄€?
+        宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
+        姝ｅ湪鍒涘缓鐩綍鈥淒ebug\\CompilerIdCXX.tlog\\鈥濄€?
+      InitializeBuildStatus:
+        姝ｅ湪鍒涘缓鈥淒ebug\\CompilerIdCXX.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+        姝ｅ湪瀵光€淒ebug\\CompilerIdCXX.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+      VcpkgTripletSelection:
+        Using triplet "x64-windows" from "E:\\CodesE\\vcpkg\\installed\\x64-windows\\"
+        Using normalized configuration "Release"
+      ClCompile:
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"E:\\CodesE\\vcpkg\\installed\\x64-windows\\include" /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"E:\\CodesE\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"E:\\CodesE\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "E:\\CodesE\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\3.27.7\\CompilerIdCXX\\CompilerIdCXX.exe
+      AppLocalFromInstalled:
+        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "E:\\CodesE\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\3.27.7\\CompilerIdCXX\\CompilerIdCXX.exe" "E:\\CodesE\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+        'pwsh.exe' 涓嶆槸鍐呴儴鎴栧閮ㄥ懡浠わ紝涔熶笉鏄彲杩愯鐨勭▼搴?
+        鎴栨壒澶勭悊鏂囦欢銆?
+        鍛戒护鈥減wsh.exe -ExecutionPolicy Bypass -noprofile -File "E:\\CodesE\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\3.27.7\\CompilerIdCXX\\CompilerIdCXX.exe" "E:\\CodesE\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"鈥濆凡閫€鍑猴紝浠ｇ爜涓?9009銆?
+        "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "E:\\CodesE\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\3.27.7\\CompilerIdCXX\\CompilerIdCXX.exe" "E:\\CodesE\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        姝ｅ湪鍒犻櫎鏂囦欢鈥淒ebug\\CompilerIdCXX.tlog\\unsuccessfulbuild鈥濄€?
+        姝ｅ湪瀵光€淒ebug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
+      宸插畬鎴愮敓鎴愰」鐩€淓:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\3.27.7\\CompilerIdCXX\\CompilerIdCXX.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+      
+      宸叉垚鍔熺敓鎴愩€?
+          0 涓鍛?
+          0 涓敊璇?
+      
+      宸茬敤鏃堕棿 00:00:01.96
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        E:/CodesE/SprayR/clion/build/CMakeFiles/3.27.7/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-z4707s"
+      binary: "E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-z4707s"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-z4707s'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_132e4.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.10+8b8e13593
+        鐢熸垚鍚姩鏃堕棿涓?2025/6/3 15:08:33銆?
+        
+        鑺傜偣 1 涓婄殑椤圭洰鈥淓:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z4707s\\cmTC_132e4.vcxproj鈥?榛樿鐩爣)銆?
+        PrepareForBuild:
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_132e4.dir\\Debug\\鈥濄€?
+          宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
+          姝ｅ湪鍒涘缓鐩綍鈥淓:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z4707s\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_132e4.dir\\Debug\\cmTC_132e4.tlog\\鈥濄€?
+        InitializeBuildStatus:
+          姝ｅ湪鍒涘缓鈥渃mTC_132e4.dir\\Debug\\cmTC_132e4.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_132e4.dir\\Debug\\cmTC_132e4.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "E:\\CodesE\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"E:\\CodesE\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_132e4.dir\\Debug\\\\" /Fd"cmTC_132e4.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\\Program Files (x86)\\cmake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
+          鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.44.35208 鐗?
+          鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
+          cl /c /I"E:\\CodesE\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_132e4.dir\\Debug\\\\" /Fd"cmTC_132e4.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\\Program Files (x86)\\cmake\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z4707s\\Debug\\cmTC_132e4.exe" /INCREMENTAL /ILK:"cmTC_132e4.dir\\Debug\\cmTC_132e4.ilk" /NOLOGO /LIBPATH:"E:\\CodesE\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"E:\\CodesE\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "E:\\CodesE\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-z4707s/Debug/cmTC_132e4.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-z4707s/Debug/cmTC_132e4.lib" /MACHINE:X64  /machine:x64 cmTC_132e4.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_132e4.vcxproj -> E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z4707s\\Debug\\cmTC_132e4.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "E:\\CodesE\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z4707s\\Debug\\cmTC_132e4.exe" "E:\\CodesE\\vcpkg\\installed\\x64-windows\\bin" "cmTC_132e4.dir\\Debug\\cmTC_132e4.tlog\\cmTC_132e4.write.1u.tlog" "cmTC_132e4.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' 涓嶆槸鍐呴儴鎴栧閮ㄥ懡浠わ紝涔熶笉鏄彲杩愯鐨勭▼搴?
+          鎴栨壒澶勭悊鏂囦欢銆?
+          鍛戒护鈥減wsh.exe -ExecutionPolicy Bypass -noprofile -File "E:\\CodesE\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z4707s\\Debug\\cmTC_132e4.exe" "E:\\CodesE\\vcpkg\\installed\\x64-windows\\bin" "cmTC_132e4.dir\\Debug\\cmTC_132e4.tlog\\cmTC_132e4.write.1u.tlog" "cmTC_132e4.dir\\Debug\\vcpkg.applocal.log"鈥濆凡閫€鍑猴紝浠ｇ爜涓?9009銆?
+          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "E:\\CodesE\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z4707s\\Debug\\cmTC_132e4.exe" "E:\\CodesE\\vcpkg\\installed\\x64-windows\\bin" "cmTC_132e4.dir\\Debug\\cmTC_132e4.tlog\\cmTC_132e4.write.1u.tlog" "cmTC_132e4.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_132e4.dir\\Debug\\cmTC_132e4.tlog\\unsuccessfulbuild鈥濄€?
+          姝ｅ湪瀵光€渃mTC_132e4.dir\\Debug\\cmTC_132e4.tlog\\cmTC_132e4.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
+        宸插畬鎴愮敓鎴愰」鐩€淓:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z4707s\\cmTC_132e4.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+        
+        宸叉垚鍔熺敓鎴愩€?
+            0 涓鍛?
+            0 涓敊璇?
+        
+        宸茬敤鏃堕棿 00:00:01.91
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-9b4xuy"
+      binary: "E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-9b4xuy"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-9b4xuy'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_377d4.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.10+8b8e13593
+        鐢熸垚鍚姩鏃堕棿涓?2025/6/3 15:08:36銆?
+        
+        鑺傜偣 1 涓婄殑椤圭洰鈥淓:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9b4xuy\\cmTC_377d4.vcxproj鈥?榛樿鐩爣)銆?
+        PrepareForBuild:
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_377d4.dir\\Debug\\鈥濄€?
+          宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
+          姝ｅ湪鍒涘缓鐩綍鈥淓:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9b4xuy\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_377d4.dir\\Debug\\cmTC_377d4.tlog\\鈥濄€?
+        InitializeBuildStatus:
+          姝ｅ湪鍒涘缓鈥渃mTC_377d4.dir\\Debug\\cmTC_377d4.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_377d4.dir\\Debug\\cmTC_377d4.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "E:\\CodesE\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"E:\\CodesE\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_377d4.dir\\Debug\\\\" /Fd"cmTC_377d4.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "D:\\Program Files (x86)\\cmake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+          鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.44.35208 鐗?
+          鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
+          cl /c /I"E:\\CodesE\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_377d4.dir\\Debug\\\\" /Fd"cmTC_377d4.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "D:\\Program Files (x86)\\cmake\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9b4xuy\\Debug\\cmTC_377d4.exe" /INCREMENTAL /ILK:"cmTC_377d4.dir\\Debug\\cmTC_377d4.ilk" /NOLOGO /LIBPATH:"E:\\CodesE\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"E:\\CodesE\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "E:\\CodesE\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-9b4xuy/Debug/cmTC_377d4.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-9b4xuy/Debug/cmTC_377d4.lib" /MACHINE:X64  /machine:x64 cmTC_377d4.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_377d4.vcxproj -> E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9b4xuy\\Debug\\cmTC_377d4.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "E:\\CodesE\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9b4xuy\\Debug\\cmTC_377d4.exe" "E:\\CodesE\\vcpkg\\installed\\x64-windows\\bin" "cmTC_377d4.dir\\Debug\\cmTC_377d4.tlog\\cmTC_377d4.write.1u.tlog" "cmTC_377d4.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' 涓嶆槸鍐呴儴鎴栧閮ㄥ懡浠わ紝涔熶笉鏄彲杩愯鐨勭▼搴?
+          鎴栨壒澶勭悊鏂囦欢銆?
+          鍛戒护鈥減wsh.exe -ExecutionPolicy Bypass -noprofile -File "E:\\CodesE\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9b4xuy\\Debug\\cmTC_377d4.exe" "E:\\CodesE\\vcpkg\\installed\\x64-windows\\bin" "cmTC_377d4.dir\\Debug\\cmTC_377d4.tlog\\cmTC_377d4.write.1u.tlog" "cmTC_377d4.dir\\Debug\\vcpkg.applocal.log"鈥濆凡閫€鍑猴紝浠ｇ爜涓?9009銆?
+          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "E:\\CodesE\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9b4xuy\\Debug\\cmTC_377d4.exe" "E:\\CodesE\\vcpkg\\installed\\x64-windows\\bin" "cmTC_377d4.dir\\Debug\\cmTC_377d4.tlog\\cmTC_377d4.write.1u.tlog" "cmTC_377d4.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_377d4.dir\\Debug\\cmTC_377d4.tlog\\unsuccessfulbuild鈥濄€?
+          姝ｅ湪瀵光€渃mTC_377d4.dir\\Debug\\cmTC_377d4.tlog\\cmTC_377d4.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
+        宸插畬鎴愮敓鎴愰」鐩€淓:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9b4xuy\\cmTC_377d4.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+        
+        宸叉垚鍔熺敓鎴愩€?
+            0 涓鍛?
+            0 涓敊璇?
+        
+        宸茬敤鏃堕棿 00:00:02.37
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:33 (find_dependency)"
+      - "E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6/Qt6Dependencies.cmake:24 (_qt_internal_find_third_party_dependencies)"
+      - "E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6/Qt6Config.cmake:112 (include)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-rhcmmt"
+      binary: "E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-rhcmmt"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6;E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-rhcmmt'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_8ffdd.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.10+8b8e13593
+        鐢熸垚鍚姩鏃堕棿涓?2025/6/3 15:08:39銆?
+        
+        鑺傜偣 1 涓婄殑椤圭洰鈥淓:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj鈥?榛樿鐩爣)銆?
+        PrepareForBuild:
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_8ffdd.dir\\Debug\\鈥濄€?
+          宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
+          姝ｅ湪鍒涘缓鐩綍鈥淓:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_8ffdd.dir\\Debug\\cmTC_8ffdd.tlog\\鈥濄€?
+        InitializeBuildStatus:
+          姝ｅ湪鍒涘缓鈥渃mTC_8ffdd.dir\\Debug\\cmTC_8ffdd.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_8ffdd.dir\\Debug\\cmTC_8ffdd.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "E:\\CodesE\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"E:\\CodesE\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8ffdd.dir\\Debug\\\\" /Fd"cmTC_8ffdd.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\src.c"
+          鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.44.35208 鐗?
+          鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
+          cl /c /I"E:\\CodesE\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8ffdd.dir\\Debug\\\\" /Fd"cmTC_8ffdd.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\src.c"
+          src.c
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018: 鈥淐L鈥濅换鍔℃剰澶栧け璐ャ€?[E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018: System.AggregateException: 鍙戠敓涓€涓垨澶氫釜閿欒銆?---> System.OutOfMemoryException: 寮曞彂绫诲瀷涓衡€淪ystem.OutOfMemoryException鈥濈殑寮傚父銆?[E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Text.Json.Serialization.Metadata.JsonTypeInfo.<EnsureConfigured>g__ConfigureSynchronized|172_0() [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Text.Json.JsonSerializerOptions.GetTypeInfoForRootType(Type type, Boolean fallBackToNearestAncestorType) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Text.Json.JsonSerializer.GetTypeInfo[T](JsonSerializerOptions options) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.CPPTasks.TrackedVCToolTask.LogSarifOutput(String toolName, TaskLoggingHelper log, IBuildEngine buildEngine, String text) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018: --- 寮曞彂寮傚父鐨勪笂涓€浣嶇疆涓爢鏍堣窡韪殑鏈熬 --- [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw() [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.Shared.ExceptionHandling.RethrowIfCritical(Exception ex) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.CPPTasks.TrackedVCToolTask.LogSarifOutput(String toolName, TaskLoggingHelper log, IBuildEngine buildEngine, String text) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.CPPTasks.TrackedVCToolTask.LogSarifOutput(String text) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.CPPTasks.TrackedVCToolTask.ToolOutputPipe.ProcessQueue() [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Threading.Tasks.Task.Execute() [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    --- 鍐呴儴寮傚父鍫嗘爤璺熻釜鐨勭粨灏?--- [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.CPPTasks.TrackedVCToolTask.ToolOutputPipe.OnProcessFinished() [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.CPPTasks.TrackedVCToolTask.CloseToolOutputPipes() [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.CPPTasks.TrackedVCToolTask.Execute() [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.BackEnd.TaskExecutionHost.Execute() [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.BackEnd.TaskBuilder.<ExecuteInstantiatedTask>d__26.MoveNext() [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018: ---> (鍐呴儴寮傚父 #0) System.OutOfMemoryException: 寮曞彂绫诲瀷涓衡€淪ystem.OutOfMemoryException鈥濈殑寮傚父銆?[E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Text.Json.Serialization.Metadata.JsonTypeInfo.<EnsureConfigured>g__ConfigureSynchronized|172_0() [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Text.Json.JsonSerializerOptions.GetTypeInfoForRootType(Type type, Boolean fallBackToNearestAncestorType) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Text.Json.JsonSerializer.GetTypeInfo[T](JsonSerializerOptions options) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.CPPTasks.TrackedVCToolTask.LogSarifOutput(String toolName, TaskLoggingHelper log, IBuildEngine buildEngine, String text) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018: --- 寮曞彂寮傚父鐨勪笂涓€浣嶇疆涓爢鏍堣窡韪殑鏈熬 --- [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw() [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.Shared.ExceptionHandling.RethrowIfCritical(Exception ex) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.CPPTasks.TrackedVCToolTask.LogSarifOutput(String toolName, TaskLoggingHelper log, IBuildEngine buildEngine, String text) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.CPPTasks.TrackedVCToolTask.LogSarifOutput(String text) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.CPPTasks.TrackedVCToolTask.ToolOutputPipe.ProcessQueue() [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Threading.Tasks.Task.Execute()<--- [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:  [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        宸插畬鎴愮敓鎴愰」鐩€淓:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
+        
+        鐢熸垚澶辫触銆?
+        
+        鈥淓:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj鈥?榛樿鐩爣) (1) ->
+        (ClCompile 鐩爣) -> 
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018: 鈥淐L鈥濅换鍔℃剰澶栧け璐ャ€?[E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018: System.AggregateException: 鍙戠敓涓€涓垨澶氫釜閿欒銆?---> System.OutOfMemoryException: 寮曞彂绫诲瀷涓衡€淪ystem.OutOfMemoryException鈥濈殑寮傚父銆?[E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Text.Json.Serialization.Metadata.JsonTypeInfo.<EnsureConfigured>g__ConfigureSynchronized|172_0() [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Text.Json.JsonSerializerOptions.GetTypeInfoForRootType(Type type, Boolean fallBackToNearestAncestorType) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Text.Json.JsonSerializer.GetTypeInfo[T](JsonSerializerOptions options) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.CPPTasks.TrackedVCToolTask.LogSarifOutput(String toolName, TaskLoggingHelper log, IBuildEngine buildEngine, String text) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018: --- 寮曞彂寮傚父鐨勪笂涓€浣嶇疆涓爢鏍堣窡韪殑鏈熬 --- [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw() [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.Shared.ExceptionHandling.RethrowIfCritical(Exception ex) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.CPPTasks.TrackedVCToolTask.LogSarifOutput(String toolName, TaskLoggingHelper log, IBuildEngine buildEngine, String text) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.CPPTasks.TrackedVCToolTask.LogSarifOutput(String text) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.CPPTasks.TrackedVCToolTask.ToolOutputPipe.ProcessQueue() [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Threading.Tasks.Task.Execute() [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    --- 鍐呴儴寮傚父鍫嗘爤璺熻釜鐨勭粨灏?--- [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.CPPTasks.TrackedVCToolTask.ToolOutputPipe.OnProcessFinished() [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.CPPTasks.TrackedVCToolTask.CloseToolOutputPipes() [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.CPPTasks.TrackedVCToolTask.Execute() [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.BackEnd.TaskExecutionHost.Execute() [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.BackEnd.TaskBuilder.<ExecuteInstantiatedTask>d__26.MoveNext() [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018: ---> (鍐呴儴寮傚父 #0) System.OutOfMemoryException: 寮曞彂绫诲瀷涓衡€淪ystem.OutOfMemoryException鈥濈殑寮傚父銆?[E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Text.Json.Serialization.Metadata.JsonTypeInfo.<EnsureConfigured>g__ConfigureSynchronized|172_0() [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Text.Json.JsonSerializerOptions.GetTypeInfoForRootType(Type type, Boolean fallBackToNearestAncestorType) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Text.Json.JsonSerializer.GetTypeInfo[T](JsonSerializerOptions options) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.CPPTasks.TrackedVCToolTask.LogSarifOutput(String toolName, TaskLoggingHelper log, IBuildEngine buildEngine, String text) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018: --- 寮曞彂寮傚父鐨勪笂涓€浣嶇疆涓爢鏍堣窡韪殑鏈熬 --- [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw() [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.Shared.ExceptionHandling.RethrowIfCritical(Exception ex) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.CPPTasks.TrackedVCToolTask.LogSarifOutput(String toolName, TaskLoggingHelper log, IBuildEngine buildEngine, String text) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.CPPTasks.TrackedVCToolTask.LogSarifOutput(String text) [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?Microsoft.Build.CPPTasks.TrackedVCToolTask.ToolOutputPipe.ProcessQueue() [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:    鍦?System.Threading.Tasks.Task.Execute()<--- [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Microsoft\\VC\\v170\\Microsoft.CppCommon.targets(787,5): error MSB4018:  [E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rhcmmt\\cmTC_8ffdd.vcxproj]
+        
+            0 涓鍛?
+            1 涓敊璇?
+        
+        宸茬敤鏃堕棿 00:00:01.54
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:33 (find_dependency)"
+      - "E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6/Qt6Dependencies.cmake:24 (_qt_internal_find_third_party_dependencies)"
+      - "E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6/Qt6Config.cmake:112 (include)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-z7b8ck"
+      binary: "E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-z7b8ck"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6;E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-z7b8ck'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_d7125.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.10+8b8e13593
+        鐢熸垚鍚姩鏃堕棿涓?2025/6/3 15:08:41銆?
+        
+        鑺傜偣 1 涓婄殑椤圭洰鈥淓:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z7b8ck\\cmTC_d7125.vcxproj鈥?榛樿鐩爣)銆?
+        PrepareForBuild:
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_d7125.dir\\Debug\\鈥濄€?
+          宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
+          姝ｅ湪鍒涘缓鐩綍鈥淓:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z7b8ck\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_d7125.dir\\Debug\\cmTC_d7125.tlog\\鈥濄€?
+        InitializeBuildStatus:
+          姝ｅ湪鍒涘缓鈥渃mTC_d7125.dir\\Debug\\cmTC_d7125.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_d7125.dir\\Debug\\cmTC_d7125.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "E:\\CodesE\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"E:\\CodesE\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d7125.dir\\Debug\\\\" /Fd"cmTC_d7125.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z7b8ck\\CheckFunctionExists.c"
+          鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.44.35208 鐗?
+          鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
+          cl /c /I"E:\\CodesE\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d7125.dir\\Debug\\\\" /Fd"cmTC_d7125.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z7b8ck\\CheckFunctionExists.c"
+          CheckFunctionExists.c
+        Link:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z7b8ck\\Debug\\cmTC_d7125.exe" /INCREMENTAL /ILK:"cmTC_d7125.dir\\Debug\\cmTC_d7125.ilk" /NOLOGO /LIBPATH:"E:\\CodesE\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"E:\\CodesE\\vcpkg\\installed\\x64-windows\\lib\\manual-link" pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "E:\\CodesE\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-z7b8ck/Debug/cmTC_d7125.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-z7b8ck/Debug/cmTC_d7125.lib" /MACHINE:X64  /machine:x64 cmTC_d7125.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減threads.lib鈥?[E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z7b8ck\\cmTC_d7125.vcxproj]
+        宸插畬鎴愮敓鎴愰」鐩€淓:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z7b8ck\\cmTC_d7125.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
+        
+        鐢熸垚澶辫触銆?
+        
+        鈥淓:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z7b8ck\\cmTC_d7125.vcxproj鈥?榛樿鐩爣) (1) ->
+        (Link 鐩爣) -> 
+          LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減threads.lib鈥?[E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-z7b8ck\\cmTC_d7125.vcxproj]
+        
+            0 涓鍛?
+            1 涓敊璇?
+        
+        宸茬敤鏃堕棿 00:00:01.40
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:33 (find_dependency)"
+      - "E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6/Qt6Dependencies.cmake:24 (_qt_internal_find_third_party_dependencies)"
+      - "E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6/Qt6Config.cmake:112 (include)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-vq2rt4"
+      binary: "E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-vq2rt4"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6;E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-vq2rt4'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_0dc5e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.10+8b8e13593
+        鐢熸垚鍚姩鏃堕棿涓?2025/6/3 15:08:43銆?
+        
+        鑺傜偣 1 涓婄殑椤圭洰鈥淓:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vq2rt4\\cmTC_0dc5e.vcxproj鈥?榛樿鐩爣)銆?
+        PrepareForBuild:
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_0dc5e.dir\\Debug\\鈥濄€?
+          宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
+          姝ｅ湪鍒涘缓鐩綍鈥淓:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vq2rt4\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_0dc5e.dir\\Debug\\cmTC_0dc5e.tlog\\鈥濄€?
+        InitializeBuildStatus:
+          姝ｅ湪鍒涘缓鈥渃mTC_0dc5e.dir\\Debug\\cmTC_0dc5e.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_0dc5e.dir\\Debug\\cmTC_0dc5e.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "E:\\CodesE\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"E:\\CodesE\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0dc5e.dir\\Debug\\\\" /Fd"cmTC_0dc5e.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vq2rt4\\CheckFunctionExists.c"
+          鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.44.35208 鐗?
+          鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
+          cl /c /I"E:\\CodesE\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0dc5e.dir\\Debug\\\\" /Fd"cmTC_0dc5e.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vq2rt4\\CheckFunctionExists.c"
+          CheckFunctionExists.c
+        Link:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vq2rt4\\Debug\\cmTC_0dc5e.exe" /INCREMENTAL /ILK:"cmTC_0dc5e.dir\\Debug\\cmTC_0dc5e.ilk" /NOLOGO /LIBPATH:"E:\\CodesE\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"E:\\CodesE\\vcpkg\\installed\\x64-windows\\lib\\manual-link" pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "E:\\CodesE\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-vq2rt4/Debug/cmTC_0dc5e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-vq2rt4/Debug/cmTC_0dc5e.lib" /MACHINE:X64  /machine:x64 cmTC_0dc5e.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減thread.lib鈥?[E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vq2rt4\\cmTC_0dc5e.vcxproj]
+        宸插畬鎴愮敓鎴愰」鐩€淓:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vq2rt4\\cmTC_0dc5e.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
+        
+        鐢熸垚澶辫触銆?
+        
+        鈥淓:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vq2rt4\\cmTC_0dc5e.vcxproj鈥?榛樿鐩爣) (1) ->
+        (Link 鐩爣) -> 
+          LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減thread.lib鈥?[E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vq2rt4\\cmTC_0dc5e.vcxproj]
+        
+            0 涓鍛?
+            1 涓敊璇?
+        
+        宸茬敤鏃堕棿 00:00:01.55
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6/FindWrapAtomic.cmake:33 (check_cxx_source_compiles)"
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:33 (find_dependency)"
+      - "E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:30 (_qt_internal_find_third_party_dependencies)"
+      - "E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:40 (include)"
+      - "D:/Program Files (x86)/cmake/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:108 (find_dependency)"
+      - "E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:39 (_qt_internal_find_qt_dependencies)"
+      - "E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
+      - "E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6/Qt6Config.cmake:157 (find_package)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Performing Test HAVE_STDATOMIC"
+    directories:
+      source: "E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-inzlrk"
+      binary: "E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-inzlrk"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6;E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;E:/Qt/6.4.3/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_STDATOMIC"
+      cached: true
+      stdout: |
+        Change Dir: 'E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-inzlrk'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_c3350.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.10+8b8e13593
+        鐢熸垚鍚姩鏃堕棿涓?2025/6/3 15:08:45銆?
+        
+        鑺傜偣 1 涓婄殑椤圭洰鈥淓:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-inzlrk\\cmTC_c3350.vcxproj鈥?榛樿鐩爣)銆?
+        PrepareForBuild:
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_c3350.dir\\Debug\\鈥濄€?
+          宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
+          姝ｅ湪鍒涘缓鐩綍鈥淓:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-inzlrk\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_c3350.dir\\Debug\\cmTC_c3350.tlog\\鈥濄€?
+        InitializeBuildStatus:
+          姝ｅ湪鍒涘缓鈥渃mTC_c3350.dir\\Debug\\cmTC_c3350.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_c3350.dir\\Debug\\cmTC_c3350.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "E:\\CodesE\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /I"E:\\CodesE\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_STDATOMIC /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++17 /Fo"cmTC_c3350.dir\\Debug\\\\" /Fd"cmTC_c3350.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-inzlrk\\src.cxx"
+          鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.44.35208 鐗?
+          鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
+          cl /c /I"E:\\CodesE\\vcpkg\\installed\\x64-windows\\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_STDATOMIC /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++17 /Fo"cmTC_c3350.dir\\Debug\\\\" /Fd"cmTC_c3350.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-inzlrk\\src.cxx"
+          src.cxx
+        Link:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-inzlrk\\Debug\\cmTC_c3350.exe" /INCREMENTAL /ILK:"cmTC_c3350.dir\\Debug\\cmTC_c3350.ilk" /NOLOGO /LIBPATH:"E:\\CodesE\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"E:\\CodesE\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "E:\\CodesE\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-inzlrk/Debug/cmTC_c3350.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:/CodesE/SprayR/clion/build/CMakeFiles/CMakeScratch/TryCompile-inzlrk/Debug/cmTC_c3350.lib" /MACHINE:X64  /machine:x64 cmTC_c3350.dir\\Debug\\src.obj
+          cmTC_c3350.vcxproj -> E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-inzlrk\\Debug\\cmTC_c3350.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "E:\\CodesE\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-inzlrk\\Debug\\cmTC_c3350.exe" "E:\\CodesE\\vcpkg\\installed\\x64-windows\\bin" "cmTC_c3350.dir\\Debug\\cmTC_c3350.tlog\\cmTC_c3350.write.1u.tlog" "cmTC_c3350.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' 涓嶆槸鍐呴儴鎴栧閮ㄥ懡浠わ紝涔熶笉鏄彲杩愯鐨勭▼搴?
+          鎴栨壒澶勭悊鏂囦欢銆?
+          鍛戒护鈥減wsh.exe -ExecutionPolicy Bypass -noprofile -File "E:\\CodesE\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-inzlrk\\Debug\\cmTC_c3350.exe" "E:\\CodesE\\vcpkg\\installed\\x64-windows\\bin" "cmTC_c3350.dir\\Debug\\cmTC_c3350.tlog\\cmTC_c3350.write.1u.tlog" "cmTC_c3350.dir\\Debug\\vcpkg.applocal.log"鈥濆凡閫€鍑猴紝浠ｇ爜涓?9009銆?
+          "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "E:\\CodesE\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "E:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-inzlrk\\Debug\\cmTC_c3350.exe" "E:\\CodesE\\vcpkg\\installed\\x64-windows\\bin" "cmTC_c3350.dir\\Debug\\cmTC_c3350.tlog\\cmTC_c3350.write.1u.tlog" "cmTC_c3350.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_c3350.dir\\Debug\\cmTC_c3350.tlog\\unsuccessfulbuild鈥濄€?
+          姝ｅ湪瀵光€渃mTC_c3350.dir\\Debug\\cmTC_c3350.tlog\\cmTC_c3350.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
+        宸插畬鎴愮敓鎴愰」鐩€淓:\\CodesE\\SprayR\\clion\\build\\CMakeFiles\\CMakeScratch\\TryCompile-inzlrk\\cmTC_c3350.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+        
+        宸叉垚鍔熺敓鎴愩€?
+            0 涓鍛?
+            0 涓敊璇?
+        
+        宸茬敤鏃堕棿 00:00:02.45
+        
+      exitCode: 0
+...
