@@ -1,13 +1,16 @@
 #pragma once
 
 #include <string>
+#include <vector>
 #include <TopoDS_Shape.hxx>
+#include <TopoDS_Face.hxx>
 #include <vtkSmartPointer.h>
 #include <vtkPolyData.h>
 #include <iostream> // 用于打印输出
 #include <TopAbs_ShapeEnum.hxx> // 形状类型枚举
 #include <TopoDS_Shell.hxx>
 #include <TopTools_ListOfShape.hxx>
+#include <gp_Dir.hxx>
 
 class OCCHandler {
 public:
@@ -68,5 +71,6 @@ private:
 
     // 获取形状类型的字符串表示
     std::string getShapeTypeString(const TopAbs_ShapeEnum& shapeType) const;
+
 
 };

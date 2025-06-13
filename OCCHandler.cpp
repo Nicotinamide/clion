@@ -51,7 +51,12 @@
 #include <GeomAdaptor_Surface.hxx>
 #include <Geom_Surface.hxx>
 #include <vtkCellData.h>
-
+#include <BRepAlgoAPI_Cut.hxx>
+#include <BRepBuilderAPI_MakePolygon.hxx>
+#include <GeomAPI_IntCS.hxx>
+#include <Geom_Line.hxx>
+#include <Geom_Plane.hxx>
+#include <BRepAlgoAPI_Common.hxx>  // 用于布尔交运算
 OCCHandler::OCCHandler() {
     // 构造函数实现
 }
@@ -750,3 +755,5 @@ TopoDS_Shape OCCHandler::extractFacesByNormal(const gp_Dir& direction, double an
     std::cout << "创建了包含 " << facesToUse.Extent() << " 个面的复合体" << std::endl;
     return compound;
 }
+
+

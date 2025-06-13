@@ -94,19 +94,12 @@ public:
     // 自动检测并调整单位
     void autoDetectAndAdjustUnits();
 
-    // 分析表面可见性 - 确定哪些面是可见的（应该首先调用）
-    bool analyzeFaceVisibility();
 
-    // 获取可见面
-    std::vector<TopoDS_Face> getVisibleFaces() const;
 
-    // 分析路径可见性 - 只保留最表层轨迹（在生成路径后调用）
-    bool analyzePathVisibility();
-
-    // 生成切割平面（只为可见面生成）
+    // 生成切割平面
     bool generateCuttingPlanes();
 
-    // 生成路径（只为可见面生成路径）
+    // 生成路径
     bool generatePaths();
 
     // 整合轨迹 - 将多条分散的路径整合为连续的喷涂轨迹
@@ -117,6 +110,12 @@ public:
 
     // 获取整合后的轨迹
     const std::vector<IntegratedTrajectory>& getIntegratedTrajectories() const;
+
+    // 面级别可见性分析 - 分析哪些面是可见的
+    bool analyzeFaceVisibility();
+
+    // 路径级别可见性分析 - 分析路径的可见性和层级
+    bool analyzePathVisibility();
 
     // 获取表面层级信息
     const std::vector<SurfaceLayer>& getSurfaceLayers() const;
@@ -187,32 +186,20 @@ private:
     bool shouldReversePath(const SprayPath& currentPath, const SprayPath& nextPath);
     void optimizeTrajectoryDirection(IntegratedTrajectory& trajectory);
 
-    // 表面可见性分析相关方法
+    // 面级别可见性分析方法
+    void extractFacesFromShape();
+    void calculateFaceDepths();
+    void detectFaceOcclusions();
+    bool isFaceOccluded(int faceIndex, int candidateOccluderIndex);
+    gp_Pnt calculateFaceCenter(const TopoDS_Face& face);
+    gp_Dir calculateFaceNormal(const TopoDS_Face& face);
+    double calculateFaceArea(const TopoDS_Face& face);
+
+    // 路径级别可见性分析方法
     void calculatePathDepths();
     void detectOcclusions();
     void classifySurfaceLayers();
     bool isPathOccluded(int pathIndex, int candidateOccluderIndex);
     double calculateOcclusionRatio(const SprayPath& occludedPath, const SprayPath& occluderPath);
-    void analyzePointLevelVisibility();
-    void segmentPartiallyOccludedPaths();
-    void filterVisiblePaths();
-    void updateIntegratedTrajectoriesWithVisibility();
 
-    // 点级别可见性分析
-    bool isPointOccluded(const PathPoint& point, int pathIndex, int candidateOccluderIndex);
-    std::vector<std::pair<int, int>> findVisibleSegments(const std::vector<bool>& pointVisibility);
-    void splitPathByVisibility(int pathIndex);
-    void validateSegmentationResults();
-
-    // 面级别可见性分析方法
-    void extractFacesFromShape();
-    void calculateFaceDepths();
-    void detectFaceOcclusions();
-    void detectPartialFaceOcclusions(); // 新增：检测部分遮挡
-    bool isFaceOccluded(int faceIndex, int candidateOccluderIndex);
-    double calculateFaceVisibilityRatio(int faceIndex, int candidateOccluderIndex); // 新增：计算可见性比例
-    bool shouldKeepPartiallyVisibleFace(const FaceVisibilityInfo& faceInfo); // 新增：判断是否保留部分可见面
-    gp_Pnt calculateFaceCenter(const TopoDS_Face& face);
-    gp_Dir calculateFaceNormal(const TopoDS_Face& face);
-    double calculateFaceArea(const TopoDS_Face& face);
 };

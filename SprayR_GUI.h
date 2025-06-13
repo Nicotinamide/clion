@@ -45,11 +45,15 @@ private:
     QPushButton* btnRotateY;
     QPushButton* btnRotateZ;
     QPushButton* btnextractFaces;
+
     QPushButton* btnaddcutFaces; // 添加切割面
 
     QVTKOpenGLNativeWidget* vtkWidget;
     vtkSmartPointer<vtkGenericOpenGLRenderWindow> renderWindow;
     vtkSmartPointer<vtkPolyData> currentPoly;
+
+    // 保存提取的shell，用于后续裁剪
+    TopoDS_Shape extractedShells;
     vtkSmartPointer<vtkActor> m_modelActor; // << 你已有的模型Actor (在 modelProcessor 中也有一个, 注意区分)
     vtkSmartPointer<vtkAxesActor> axes;
     vtkSmartPointer<vtkOrientationMarkerWidget> orientationWidget;

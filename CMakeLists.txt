@@ -43,25 +43,8 @@ add_executable(SprayR main.cpp
         FaceProcessor.h
         FaceProcessor.cpp)
 
-# 添加路径长度测试可执行文件
-add_executable(test_path_length test_path_length.cpp
-        FaceProcessor.h
-        FaceProcessor.cpp)
 
-# 添加简化的路径长度测试程序
-add_executable(path_length_test_simple path_length_test_simple.cpp
-        FaceProcessor.h
-        FaceProcessor.cpp)
 
-# 添加正确流程测试程序
-add_executable(test_correct_flow test_correct_flow.cpp
-        FaceProcessor.h
-        FaceProcessor.cpp)
-
-# 添加部分可见面测试程序
-add_executable(test_partial_visible_faces test_partial_visible_faces.cpp
-        FaceProcessor.h
-        FaceProcessor.cpp)
 
 # 链接VTK和OpenCASCADE库
 target_link_libraries(SprayR PRIVATE
@@ -79,40 +62,3 @@ target_link_libraries(SprayR PRIVATE
         TKDEIGES
 )
 
-# 为测试程序链接必要的库
-target_link_libraries(test_path_length PRIVATE
-        ${VTK_LIBRARIES}
-        TKernel
-        TKMath
-        TKBRep
-        TKGeomBase
-        TKV3d
-        TKOpenGl
-        TKPrim
-        TKDESTEP
-        TKDEIGES
-)
-
-# 为简化测试程序链接必要的库
-target_link_libraries(path_length_test_simple PRIVATE
-        TKernel
-        TKMath
-        TKBRep
-        TKGeomBase
-)
-
-# 为正确流程测试程序链接必要的库
-target_link_libraries(test_correct_flow PRIVATE
-        TKernel
-        TKMath
-        TKBRep
-        TKGeomBase
-)
-
-# 为部分可见面测试程序链接必要的库
-target_link_libraries(test_partial_visible_faces PRIVATE
-        TKernel
-        TKMath
-        TKBRep
-        TKGeomBase
-)

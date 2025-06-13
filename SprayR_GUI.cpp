@@ -82,6 +82,7 @@ void Spray_GUI::setupUI() {
     btnRotateY           = new QPushButton(QStringLiteral("绕Y旋转90"), centralWidget);
     btnRotateZ           = new QPushButton(QStringLiteral("绕Z旋转90"), centralWidget);
     btnextractFaces     = new QPushButton(QStringLiteral("提取shells"), centralWidget);
+
     btnaddcutFaces      = new QPushButton(QStringLiteral("添加切割面"), centralWidget); // 添加切割面按钮
     // 将所有按钮添加到按钮布局
     buttonLayout->addWidget(btnLoadModel);
@@ -89,6 +90,7 @@ void Spray_GUI::setupUI() {
     buttonLayout->addWidget(btnRotateY);
     buttonLayout->addWidget(btnRotateZ);
     buttonLayout->addWidget(btnextractFaces);
+
     buttonLayout->addWidget(btnaddcutFaces); // 添加切割面按钮
 
     // 按钮布局加入左侧垂直布局
@@ -207,24 +209,37 @@ void Spray_GUI::connectSignals() {
     // 提取shells按钮
     connect(btnextractFaces, &QPushButton::clicked, this, [this]() {
             gp_Dir direction(0, 0, 1); // 默认法向量方向为Z轴
-            TopoDS_Shape extractshape = occHandler.extractFacesByNormal(direction);
 
-            occHandler.printShapeStructure(extractshape,TopAbs_FACE,std::cout, 0); // 打印形状结构，深度限制为4
+            // 先正常提取面，不进行裁剪
+            std::cout << "🔍 基于法向量提取面..." << std::endl;
+            extractedShells = occHandler.extractFacesByNormal(direction, 5.0);
 
+            occHandler.printShapeStructure(extractedShells, TopAbs_FACE, std::cout, 0); // 打印形状结构，深度限制为4
 
-            vtkSmartPointer<vtkPolyData> poly = occHandler.shapeToPolyData(extractshape);
+            std::cout << "✅ 面提取完成，已保存提取的shells用于后续处理" << std::endl;
+
+            vtkSmartPointer<vtkPolyData> poly = occHandler.shapeToPolyData(extractedShells);
 
             vtkViewer.setModel(poly, defaultOptions);
             renderWindow->Render();
         });
 
+
+
     connect(btnaddcutFaces, &QPushButton::clicked, this, [this]() {
+        if (extractedShells.IsNull()) {
+            QMessageBox::warning(this, "操作错误", "请先点击'提取shells'按钮提取面！");
+            return;
+        }
+
         gp_Dir direction(0, 0, 1); // 默认法向量方向为Z轴
-        TopoDS_Shape extractshape = occHandler.extractFacesByNormal(direction);
+
+        std::cout << "🎯 使用当前保存的shells生成切割路径..." << std::endl;
+        std::cout << "📋 当前shells可能是原始提取的或经过重叠裁剪的" << std::endl;
 
         FaceProcessor processor;
 
-        processor.setShape(extractshape);
+        processor.setShape(extractedShells);
 
         try {
             // 增加间距，减少切割平面数量
@@ -233,15 +248,10 @@ void Spray_GUI::connectSignals() {
             double offsetDistance = 300.0;  // 保持偏移距离为0.0
             processor.setCuttingParameters(direction, pathSpacing, offsetDistance, 0.2);  // 设置点密度为0.2
 
-            // 第一步：分析面的可见性
-            std::cout << "开始分析面的可见性..." << std::endl;
-            if (!processor.analyzeFaceVisibility()) {
-                QMessageBox::warning(this, "可见性分析失败", "无法分析面的可见性，请检查输入模型。");
-                return;
-            }
 
-            // 第二步：为可见面生成切割平面
-            std::cout << "开始为可见面生成切割平面..." << std::endl;
+
+            // 生成切割平面
+            std::cout << "开始生成切割平面..." << std::endl;
             if (processor.generateCuttingPlanes()) {
                 // 显示切割平面
                 std::cout << "生成切割平面成功，准备显示..." << std::endl;
