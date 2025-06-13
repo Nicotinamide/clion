@@ -28,6 +28,9 @@
 #include <algorithm>
 #include <iostream>
 #include <iomanip>
+#include <BRep_Builder.hxx>
+#include <TopoDS_Compound.hxx>
+#include <BRepTools.hxx>
 
 // 构造函数
 FaceProcessor::FaceProcessor() : pathSpacing(10.0), offsetDistance(5.0), pointDensity(1.0), minPathLength(20.0) {
@@ -135,20 +138,30 @@ void FaceProcessor::autoDetectAndAdjustUnits() {
     }
 }
 
-// 生成切割平面
+// 生成切割平面（只为可见面生成）
 bool FaceProcessor::generateCuttingPlanes() {
-    if (inputFaces.IsNull()) {
-        std::cerr << "没有可用的面来生成切割平面" << std::endl;
+    if (visibleFaces.empty()) {
+        std::cerr << "No visible faces available for cutting plane generation. Call analyzeFaceVisibility() first." << std::endl;
         return false;
     }
 
     // 清空之前的切割平面
     cuttingPlanes.clear();
 
-    // 将整个 inputFaces 作为一个整体处理
-    // 计算整体包围盒
+    std::cout << "Generating cutting planes for " << visibleFaces.size() << " visible faces..." << std::endl;
+
+    // 创建包含所有可见面的复合形状
+    TopoDS_Compound visibleCompound;
+    BRep_Builder builder;
+    builder.MakeCompound(visibleCompound);
+
+    for (const auto& face : visibleFaces) {
+        builder.Add(visibleCompound, face);
+    }
+
+    // 计算可见面的整体包围盒
     Bnd_Box boundingBox;
-    BRepBndLib::Add(inputFaces, boundingBox);
+    BRepBndLib::Add(visibleCompound, boundingBox);
 
     if (boundingBox.IsVoid()) {
         std::cerr << "无法计算形状的包围盒" << std::endl;
@@ -223,10 +236,10 @@ bool FaceProcessor::generateCuttingPlanes() {
 
 }
 
-// 生成路径
+// 生成路径（只为可见面生成路径）
 bool FaceProcessor::generatePaths() {
-    if (inputFaces.IsNull()) {
-        std::cerr << "没有可用的面来生成路径" << std::endl;
+    if (visibleFaces.empty()) {
+        std::cerr << "No visible faces available for path generation. Call analyzeFaceVisibility() first." << std::endl;
         return false;
     }
 
@@ -238,15 +251,26 @@ bool FaceProcessor::generatePaths() {
     // 清空之前的路径
     clearPaths();
 
+    std::cout << "Generating paths for " << visibleFaces.size() << " visible faces..." << std::endl;
+
     int pathCount = 0;
+
+    // 创建包含所有可见面的复合形状
+    TopoDS_Compound visibleCompound;
+    BRep_Builder builder;
+    builder.MakeCompound(visibleCompound);
+
+    for (const auto& face : visibleFaces) {
+        builder.Add(visibleCompound, face);
+    }
 
     // 对每个切割平面
     for (size_t i = 0; i < cuttingPlanes.size(); i++) {
         // 创建切割平面
         TopoDS_Face planeFace = BRepBuilderAPI_MakeFace(cuttingPlanes[i]).Face();
 
-        // 计算交线
-        BRepAlgoAPI_Section section(inputFaces, planeFace, Standard_False);
+        // 计算与可见面的交线
+        BRepAlgoAPI_Section section(visibleCompound, planeFace, Standard_False);
         section.Build();
 
         if (!section.IsDone() || section.Shape().IsNull()) {
@@ -522,6 +546,305 @@ void FaceProcessor::printPathLengthStatistics() const {
 
     std::string units = detectUnits();
     std::cout << "Detected units: " << units << std::endl;
+}
+
+// 分析面的可见性（应该首先调用）
+bool FaceProcessor::analyzeFaceVisibility() {
+    if (inputFaces.IsNull()) {
+        std::cerr << "No input faces available for visibility analysis" << std::endl;
+        return false;
+    }
+
+    std::cout << "Starting face-level visibility analysis..." << std::endl;
+
+    // 1. 从输入形状中提取所有面
+    extractFacesFromShape();
+
+    if (faceVisibility.empty()) {
+        std::cerr << "No faces found in input shape" << std::endl;
+        return false;
+    }
+
+    // 2. 计算每个面的深度
+    calculateFaceDepths();
+
+    // 3. 检测面之间的遮挡关系（包括部分遮挡）
+    detectPartialFaceOcclusions();
+
+    // 4. 提取可见面（包括部分可见面）
+    visibleFaces.clear();
+    int fullyVisibleCount = 0;
+    int partiallyVisibleCount = 0;
+    int occludedCount = 0;
+
+    for (const auto& faceInfo : faceVisibility) {
+        if (faceInfo.isVisible) {
+            // 保留所有可见面（包括部分可见）
+            visibleFaces.push_back(faceInfo.face);
+
+            if (faceInfo.isPartiallyVisible) {
+                partiallyVisibleCount++;
+            } else {
+                fullyVisibleCount++;
+            }
+        } else {
+            occludedCount++;
+        }
+    }
+
+    std::cout << "Face visibility analysis completed:" << std::endl;
+    std::cout << "  Total faces: " << faceVisibility.size() << std::endl;
+    std::cout << "  Fully visible faces: " << fullyVisibleCount << std::endl;
+    std::cout << "  Partially visible faces: " << partiallyVisibleCount << std::endl;
+    std::cout << "  Total visible faces: " << (fullyVisibleCount + partiallyVisibleCount) << std::endl;
+    std::cout << "  Occluded faces: " << occludedCount << std::endl;
+
+    return (fullyVisibleCount + partiallyVisibleCount) > 0;
+}
+
+// 获取可见面
+std::vector<TopoDS_Face> FaceProcessor::getVisibleFaces() const {
+    return visibleFaces;
+}
+
+// 从输入形状中提取所有面
+void FaceProcessor::extractFacesFromShape() {
+    faceVisibility.clear();
+
+    int faceIndex = 0;
+    for (TopExp_Explorer faceExplorer(inputFaces, TopAbs_FACE); faceExplorer.More(); faceExplorer.Next()) {
+        TopoDS_Face face = TopoDS::Face(faceExplorer.Current());
+
+        FaceVisibilityInfo faceInfo;
+        faceInfo.face = face;
+        faceInfo.faceIndex = faceIndex++;
+        faceInfo.centerPoint = calculateFaceCenter(face);
+        faceInfo.normal = calculateFaceNormal(face);
+        faceInfo.area = calculateFaceArea(face);
+        faceInfo.isVisible = true; // 初始假设都可见
+        faceInfo.isPartiallyVisible = false; // 初始假设不是部分可见
+        faceInfo.visibilityRatio = 1.0; // 初始完全可见
+        faceInfo.depth = 0.0; // 将在calculateFaceDepths中计算
+
+        faceVisibility.push_back(faceInfo);
+    }
+
+    std::cout << "Extracted " << faceVisibility.size() << " faces from input shape" << std::endl;
+}
+
+// 计算面的深度
+void FaceProcessor::calculateFaceDepths() {
+    // 使用Z+方向作为深度方向（与面提取方向一致）
+    gp_Dir depthDirection(0, 0, 1);
+
+    for (auto& faceInfo : faceVisibility) {
+        // 计算面中心点在深度方向上的投影
+        gp_Vec centerVec(faceInfo.centerPoint.XYZ());
+        faceInfo.depth = centerVec.Dot(gp_Vec(depthDirection.XYZ()));
+    }
+
+    std::cout << "Calculated depths for " << faceVisibility.size() << " faces" << std::endl;
+}
+
+// 检测面之间的遮挡关系
+void FaceProcessor::detectFaceOcclusions() {
+    const double DEPTH_THRESHOLD = pathSpacing * 0.1; // 深度差阈值
+
+    int occludedCount = 0;
+
+    for (size_t i = 0; i < faceVisibility.size(); i++) {
+        if (!faceVisibility[i].isVisible) continue;
+
+        // 检查是否被其他面遮挡
+        for (size_t j = 0; j < faceVisibility.size(); j++) {
+            if (i == j || !faceVisibility[j].isVisible) continue;
+
+            // 在Z+方向上，Z值更大的面遮挡Z值更小的面
+            if (faceVisibility[j].depth <= faceVisibility[i].depth + DEPTH_THRESHOLD) continue;
+
+            // 检查是否存在遮挡
+            if (isFaceOccluded(i, j)) {
+                faceVisibility[i].isVisible = false;
+                occludedCount++;
+                break; // 一旦被遮挡就不需要继续检查
+            }
+        }
+    }
+
+    std::cout << "Face occlusion detection completed: " << occludedCount << " faces occluded" << std::endl;
+}
+
+// 检测部分面遮挡关系（改进版本）
+void FaceProcessor::detectPartialFaceOcclusions() {
+    const double DEPTH_THRESHOLD = pathSpacing * 0.1; // 深度差阈值
+    const double MIN_VISIBILITY_RATIO = 0.1; // 最小可见性比例阈值
+
+    int fullyOccludedCount = 0;
+    int partiallyOccludedCount = 0;
+
+    for (size_t i = 0; i < faceVisibility.size(); i++) {
+        if (!faceVisibility[i].isVisible) continue;
+
+        double totalVisibilityRatio = 1.0;
+        std::vector<int> occluders;
+
+        // 检查是否被其他面遮挡
+        for (size_t j = 0; j < faceVisibility.size(); j++) {
+            if (i == j || !faceVisibility[j].isVisible) continue;
+
+            // 在Z+方向上，Z值更大的面遮挡Z值更小的面
+            if (faceVisibility[j].depth <= faceVisibility[i].depth + DEPTH_THRESHOLD) continue;
+
+            // 计算遮挡比例
+            double occlusionRatio = calculateFaceVisibilityRatio(i, j);
+            if (occlusionRatio > 0.0) {
+                occluders.push_back(j);
+                totalVisibilityRatio *= (1.0 - occlusionRatio);
+            }
+        }
+
+        // 更新面的可见性信息
+        faceVisibility[i].visibilityRatio = totalVisibilityRatio;
+        faceVisibility[i].occludingFaces = occluders;
+
+        if (totalVisibilityRatio < MIN_VISIBILITY_RATIO) {
+            // 几乎完全被遮挡，标记为不可见
+            faceVisibility[i].isVisible = false;
+            faceVisibility[i].isPartiallyVisible = false;
+            fullyOccludedCount++;
+        } else if (totalVisibilityRatio < 0.8) {
+            // 部分被遮挡，但仍然保留
+            faceVisibility[i].isVisible = true;
+            faceVisibility[i].isPartiallyVisible = true;
+            partiallyOccludedCount++;
+        } else {
+            // 基本完全可见
+            faceVisibility[i].isVisible = true;
+            faceVisibility[i].isPartiallyVisible = false;
+        }
+    }
+
+    std::cout << "Improved face occlusion detection completed:" << std::endl;
+    std::cout << "  Fully occluded faces: " << fullyOccludedCount << std::endl;
+    std::cout << "  Partially occluded faces: " << partiallyOccludedCount << std::endl;
+    std::cout << "  Fully visible faces: " << (faceVisibility.size() - fullyOccludedCount - partiallyOccludedCount) << std::endl;
+}
+
+// 计算面的可见性比例
+double FaceProcessor::calculateFaceVisibilityRatio(int faceIndex, int candidateOccluderIndex) {
+    const FaceVisibilityInfo& face = faceVisibility[faceIndex];
+    const FaceVisibilityInfo& occluder = faceVisibility[candidateOccluderIndex];
+
+    // 计算两个面中心点在XY平面上的距离
+    double distance = sqrt(pow(face.centerPoint.X() - occluder.centerPoint.X(), 2) +
+                          pow(face.centerPoint.Y() - occluder.centerPoint.Y(), 2));
+
+    // 基于面积计算影响半径
+    double faceRadius = sqrt(face.area / M_PI);
+    double occluderRadius = sqrt(occluder.area / M_PI);
+
+    // 如果距离大于两个半径之和，没有遮挡
+    if (distance >= faceRadius + occluderRadius) {
+        return 0.0;
+    }
+
+    // 如果遮挡面完全覆盖被遮挡面
+    if (distance + faceRadius <= occluderRadius) {
+        return 1.0; // 完全遮挡
+    }
+
+    // 如果被遮挡面完全覆盖遮挡面
+    if (distance + occluderRadius <= faceRadius) {
+        return pow(occluderRadius / faceRadius, 2); // 按面积比例计算遮挡
+    }
+
+    // 部分重叠的情况 - 使用简化的重叠面积计算
+    double overlapRatio = 1.0 - (distance / (faceRadius + occluderRadius));
+    overlapRatio = std::max(0.0, std::min(1.0, overlapRatio));
+
+    // 考虑面积差异的影响
+    double areaRatio = std::min(occluder.area / face.area, 1.0);
+
+    return overlapRatio * areaRatio;
+}
+
+// 判断是否应该保留部分可见面
+bool FaceProcessor::shouldKeepPartiallyVisibleFace(const FaceVisibilityInfo& faceInfo) {
+    // 如果可见性比例太低，不保留
+    if (faceInfo.visibilityRatio < 0.1) {
+        return false;
+    }
+
+    // 如果面积太小且可见性比例不高，不保留
+    if (faceInfo.area < 100.0 && faceInfo.visibilityRatio < 0.3) {
+        return false;
+    }
+
+    // 其他情况保留
+    return true;
+}
+
+// 检查面是否被遮挡
+bool FaceProcessor::isFaceOccluded(int faceIndex, int candidateOccluderIndex) {
+    const FaceVisibilityInfo& face = faceVisibility[faceIndex];
+    const FaceVisibilityInfo& occluder = faceVisibility[candidateOccluderIndex];
+
+    // 简化的遮挡检测：检查面中心点的XY投影是否重叠
+    double distance = sqrt(pow(face.centerPoint.X() - occluder.centerPoint.X(), 2) +
+                          pow(face.centerPoint.Y() - occluder.centerPoint.Y(), 2));
+
+    // 如果两个面的中心点在XY平面上的距离小于某个阈值，认为存在遮挡
+    double overlapThreshold = sqrt(face.area + occluder.area) * 0.1; // 基于面积的阈值
+
+    return distance < overlapThreshold;
+}
+
+// 计算面的中心点
+gp_Pnt FaceProcessor::calculateFaceCenter(const TopoDS_Face& face) {
+    GProp_GProps props;
+    BRepGProp::SurfaceProperties(face, props);
+    return props.CentreOfMass();
+}
+
+// 计算面的法向量
+gp_Dir FaceProcessor::calculateFaceNormal(const TopoDS_Face& face) {
+    // 获取面的中心点处的法向量
+    Handle(Geom_Surface) surface = BRep_Tool::Surface(face);
+
+    // 获取参数范围
+    Standard_Real uMin, uMax, vMin, vMax;
+    BRepTools::UVBounds(face, uMin, uMax, vMin, vMax);
+
+    // 计算中心参数
+    Standard_Real uMid = (uMin + uMax) * 0.5;
+    Standard_Real vMid = (vMin + vMax) * 0.5;
+
+    // 计算法向量
+    gp_Pnt point;
+    gp_Vec du, dv;
+    surface->D1(uMid, vMid, point, du, dv);
+
+    gp_Vec normal = du.Crossed(dv);
+    if (normal.Magnitude() > 1e-10) {
+        normal.Normalize();
+
+        // 确保法向量指向正确方向（与面的方向一致）
+        if (face.Orientation() == TopAbs_REVERSED) {
+            normal.Reverse();
+        }
+
+        return gp_Dir(normal);
+    }
+
+    // 如果计算失败，返回默认方向
+    return gp_Dir(0, 0, 1);
+}
+
+// 计算面的面积
+double FaceProcessor::calculateFaceArea(const TopoDS_Face& face) {
+    GProp_GProps props;
+    BRepGProp::SurfaceProperties(face, props);
+    return props.Mass(); // 对于面，Mass()返回面积
 }
 
 // 整合轨迹 - 将多条分散的路径整合为连续的喷涂轨迹
@@ -1100,8 +1423,8 @@ vtkSmartPointer<vtkPolyData> FaceProcessor::integratedTrajectoriesToPolyData() c
     return polyData;
 }
 
-// 表面可见性分析 - 只保留最表层轨迹
-bool FaceProcessor::analyzeSurfaceVisibility() {
+// 路径可见性分析 - 只保留最表层轨迹
+bool FaceProcessor::analyzePathVisibility() {
     if (generatedPaths.empty()) {
         std::cerr << "没有可用的路径进行可见性分析" << std::endl;
         return false;

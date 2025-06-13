@@ -233,8 +233,15 @@ void Spray_GUI::connectSignals() {
             double offsetDistance = 300.0;  // 保持偏移距离为0.0
             processor.setCuttingParameters(direction, pathSpacing, offsetDistance, 0.2);  // 设置点密度为0.2
 
-            // 首先，生成切割平面
-            std::cout << "开始生成切割平面..." << std::endl;
+            // 第一步：分析面的可见性
+            std::cout << "开始分析面的可见性..." << std::endl;
+            if (!processor.analyzeFaceVisibility()) {
+                QMessageBox::warning(this, "可见性分析失败", "无法分析面的可见性，请检查输入模型。");
+                return;
+            }
+
+            // 第二步：为可见面生成切割平面
+            std::cout << "开始为可见面生成切割平面..." << std::endl;
             if (processor.generateCuttingPlanes()) {
                 // 显示切割平面
                 std::cout << "生成切割平面成功，准备显示..." << std::endl;
@@ -257,8 +264,8 @@ void Spray_GUI::connectSignals() {
                 }
             }
 
-            // processor.generateCuttingPlanes();
-            std::cout << "开始生成路径..." << std::endl;
+            // 第三步：为可见面生成路径
+            std::cout << "开始为可见面生成路径..." << std::endl;
 
             // 生成路径
             if (processor.generatePaths()) {
@@ -274,25 +281,27 @@ void Spray_GUI::connectSignals() {
                                        QMessageBox::Yes | QMessageBox::No);
                 }
 
-                // 整合轨迹
+                // 第四步：整合轨迹
                 std::cout << "开始整合轨迹..." << std::endl;
                 if (processor.integrateTrajectories()) {
                     const std::vector<IntegratedTrajectory>& trajectories = processor.getIntegratedTrajectories();
                     std::cout << "成功整合为 " << trajectories.size() << " 条连续轨迹" << std::endl;
 
-                    // 表面可见性分析
-                    std::cout << "开始表面可见性分析..." << std::endl;
-                    if (processor.analyzeSurfaceVisibility()) {
+                    // 第五步：路径级别的可见性分析（可选，用于进一步优化）
+                    std::cout << "开始路径级别的可见性分析..." << std::endl;
+                    if (processor.analyzePathVisibility()) {
                         const std::vector<SurfaceLayer>& layers = processor.getSurfaceLayers();
                         std::cout << "可见性分析完成，识别出 " << layers.size() << " 个表面层级" << std::endl;
 
                         // 显示表层轨迹统计
                         if (!layers.empty()) {
-                            std::cout << "最表层包含 " << layers[0].pathIndices.size() << " 条可见路径段" << std::endl;
+                            std::cout << "路径级别可见性分析完成，最表层包含 " << layers[0].pathIndices.size() << " 条可见路径段" << std::endl;
                             std::cout << "已按Z+方向进行遮挡检测和智能路径分割" << std::endl;
                             std::cout << "保留了所有没被遮挡且长度≥20mm的路径段，删除了被遮挡和过短的部分" << std::endl;
                             std::cout << "颜色说明：绿色=喷涂路径，橙色=连接路径" << std::endl;
                         }
+                    } else {
+                        std::cout << "跳过路径级别的可见性分析，直接使用面级别的可见性结果" << std::endl;
                     }
 
                     // 只显示表层可见轨迹
