@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.27)
 project(SprayR)
 
 set(CMAKE_CXX_STANDARD 17)
+# 包含模块配置
+include(OCCHandler_modules.cmake)
 
 set(CMAKE_PREFIX_PATH "E:/Qt/6.4.3/msvc2019_64" ${CMAKE_PREFIX_PATH})
 find_package(Qt6 REQUIRED COMPONENTS Widgets OpenGLWidgets)
@@ -38,8 +40,8 @@ add_executable(SprayR main.cpp
         SprayR_GUI.h
         VTKViewer.h
         VTKViewer.cpp
-        OCCHandler.h
-        OCCHandler.cpp
+        ${OCCHANDLER_SOURCES}
+        ${OCCHANDLER_HEADERS}
         FaceProcessor.h
         FaceProcessor.cpp)
 

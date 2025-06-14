@@ -1,0 +1,156 @@
+# 模块化OCCHandler的CMakeLists.txt配置
+# 如果遇到编译问题，可以使用这个配置替换原来的CMakeLists.txt
+
+cmake_minimum_required(VERSION 3.16)
+project(SprayR)
+
+# 设置C++标准
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# 设置编译器标志
+if(MSVC)
+    # 确保使用正确的运行时库
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /EHsc /std:c++17")
+    set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MDd")
+    set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MD")
+    
+    # 添加必要的定义
+    add_definitions(-DHAVE_FREETYPE)
+    add_definitions(-DHAVE_OPENGL_EXT)
+    add_definitions(-DHAVE_TK)
+    add_definitions(-DHAVE_VTK)
+    add_definitions(-DOCCT_DEBUG)
+    add_definitions(-DUNICODE)
+    add_definitions(-D_UNICODE)
+    add_definitions(-DWIN64)
+    add_definitions(-D_WIN64)
+    add_definitions(-DWIN32)
+    add_definitions(-D_WINDOWS)
+    add_definitions(-D_CRT_NONSTDC_NO_DEPRECATE)
+    add_definitions(-D_CRT_SECURE_NO_WARNINGS)
+    add_definitions(-D_ENABLE_EXTENDED_ALIGNED_STORAGE)
+endif()
+
+# 查找Qt6
+find_package(Qt6 REQUIRED COMPONENTS Core Widgets OpenGL OpenGLWidgets)
+
+# 查找VTK
+find_package(VTK REQUIRED)
+
+# 查找OpenCASCADE
+set(OpenCASCADE_DIR "E:/CodesE/OCCT/INSTALL")
+find_package(OpenCASCADE REQUIRED)
+
+# 包含目录
+include_directories(${OpenCASCADE_INCLUDE_DIR})
+include_directories(${VTK_INCLUDE_DIRS})
+
+# OCCHandler模块化源文件
+set(OCCHANDLER_SOURCES
+    OCCHandler_Core.cpp
+    OCCHandler_Repair.cpp
+    OCCHandler_AdvancedRepair.cpp
+    OCCHandler_FaceProcessing.cpp
+    OCCHandler_ShapeAnalysis.cpp
+    OCCHandler_Visualization.cpp
+    OCCHandler_Occlusion.cpp
+)
+
+# 主程序源文件
+set(SPRAYR_SOURCES
+    ${OCCHANDLER_SOURCES}
+    OCCHandler.h
+    SprayR_GUI.cpp
+    SprayR_GUI.h
+    main.cpp
+)
+
+# 启用Qt的MOC
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTORCC ON)
+
+# 创建可执行文件
+add_executable(SprayR ${SPRAYR_SOURCES})
+
+# 链接库
+target_link_libraries(SprayR
+    Qt6::Core
+    Qt6::Widgets
+    Qt6::OpenGL
+    Qt6::OpenGLWidgets
+    ${OpenCASCADE_LIBRARIES}
+    ${VTK_LIBRARIES}
+)
+
+# VTK模块定义
+vtk_module_autoinit(
+    TARGETS SprayR
+    MODULES ${VTK_LIBRARIES}
+)
+
+# 设置输出目录
+set_target_properties(SprayR PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
+)
+
+# 如果编译失败，可以尝试以下替代方案：
+
+# 方案1：只编译核心模块
+# add_executable(SprayR_Core
+#     OCCHandler_Core.cpp
+#     OCCHandler.h
+#     test_modular_occhandler.cpp
+# )
+
+# 方案2：逐步添加模块
+# set(MINIMAL_SOURCES
+#     OCCHandler_Core.cpp
+#     OCCHandler_Repair.cpp
+#     OCCHandler.h
+#     SprayR_GUI.cpp
+#     main.cpp
+# )
+# add_executable(SprayR_Minimal ${MINIMAL_SOURCES})
+
+# 方案3：使用原OCCHandler.cpp（应急方案）
+# add_executable(SprayR_Original
+#     OCCHandler.cpp
+#     OCCHandler.h
+#     SprayR_GUI.cpp
+#     main.cpp
+# )
+
+# 调试信息
+message(STATUS "Qt6 found: ${Qt6_FOUND}")
+message(STATUS "VTK found: ${VTK_FOUND}")
+message(STATUS "OpenCASCADE found: ${OpenCASCADE_FOUND}")
+message(STATUS "C++ Compiler: ${CMAKE_CXX_COMPILER}")
+message(STATUS "C++ Standard: ${CMAKE_CXX_STANDARD}")
+
+# 编译器特定设置
+if(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
+    message(STATUS "Using MSVC compiler")
+    # 确保包含标准库路径
+    target_include_directories(SprayR PRIVATE 
+        ${CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES}
+    )
+elseif(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+    message(STATUS "Using GCC compiler")
+    target_compile_options(SprayR PRIVATE -Wall -Wextra)
+elseif(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+    message(STATUS "Using Clang compiler")
+    target_compile_options(SprayR PRIVATE -Wall -Wextra)
+endif()
+
+# 安装规则（可选）
+install(TARGETS SprayR
+    RUNTIME DESTINATION bin
+)
+
+# 使用说明：
+# 1. 将此文件重命名为 CMakeLists.txt
+# 2. 删除或备份原来的 CMakeLists.txt
+# 3. 重新配置CMake：cmake -B build -S .
+# 4. 编译：cmake --build build --target SprayR

@@ -45,7 +45,6 @@ private:
     QPushButton* btnRotateY;
     QPushButton* btnRotateZ;
     QPushButton* btnextractFaces;
-
     QPushButton* btnaddcutFaces; // 添加切割面
 
     QVTKOpenGLNativeWidget* vtkWidget;

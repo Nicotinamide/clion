@@ -82,7 +82,6 @@ void Spray_GUI::setupUI() {
     btnRotateY           = new QPushButton(QStringLiteral("绕Y旋转90"), centralWidget);
     btnRotateZ           = new QPushButton(QStringLiteral("绕Z旋转90"), centralWidget);
     btnextractFaces     = new QPushButton(QStringLiteral("提取shells"), centralWidget);
-
     btnaddcutFaces      = new QPushButton(QStringLiteral("添加切割面"), centralWidget); // 添加切割面按钮
     // 将所有按钮添加到按钮布局
     buttonLayout->addWidget(btnLoadModel);
@@ -90,7 +89,6 @@ void Spray_GUI::setupUI() {
     buttonLayout->addWidget(btnRotateY);
     buttonLayout->addWidget(btnRotateZ);
     buttonLayout->addWidget(btnextractFaces);
-
     buttonLayout->addWidget(btnaddcutFaces); // 添加切割面按钮
 
     // 按钮布局加入左侧垂直布局
@@ -136,13 +134,16 @@ void Spray_GUI::connectSignals() {
         if (fileName.isEmpty()) return;
 
 
-        if (!occHandler.loadStepFile(fileName.toStdString(), true)) {
+        // 使用基础修复功能加载STEP文件（保持法向量方向）
+        // 参数说明：文件名，移动到原点=true，自动修复=false（避免法向量问题）
+        if (!occHandler.loadStepFile(fileName.toStdString(), true, true)) {
             QMessageBox::warning(this, "加载失败", "STEP文件加载失败！");
             return;
         }
 
         TopoDS_Shape shape = occHandler.getShape();
-        occHandler.printShapeStructure(shape,TopAbs_SHELL,std::cout, 0); // 打印形状结构，深度限制为4
+        std::cout << "📋 模型结构分析：" << std::endl;
+        occHandler.printShapeStructure(shape, TopAbs_SHELL, std::cout, 0); // 显示完整结构和统计信息
 
         vtkSmartPointer<vtkPolyData> poly = occHandler.shapeToPolyData();
         if (!poly || poly->GetNumberOfPoints() == 0) {
@@ -158,6 +159,10 @@ void Spray_GUI::connectSignals() {
         defaultOptions.showNormals = true; // 显示法线
         defaultOptions.surfaceOpacity = 1.0; // 不透明度
         defaultOptions.normalScale = 50.0; // 法线箭头大小
+        // 明确设置银色
+        defaultOptions.surfaceColor[0] = 0.75; // 银色 R
+        defaultOptions.surfaceColor[1] = 0.75; // 银色 G
+        defaultOptions.surfaceColor[2] = 0.75; // 银色 B
 
         // 更新VTKViewer显示模型
 
@@ -206,25 +211,57 @@ void Spray_GUI::connectSignals() {
         });
 
 
-    // 提取shells按钮
+    // 提取shells按钮（集成面合并功能）
     connect(btnextractFaces, &QPushButton::clicked, this, [this]() {
             gp_Dir direction(0, 0, 1); // 默认法向量方向为Z轴
 
-            // 先正常提取面，不进行裁剪
-            std::cout << "🔍 基于法向量提取面..." << std::endl;
-            extractedShells = occHandler.extractFacesByNormal(direction, 5.0);
+            try {
+                // 第一步：提取面
+                std::cout << "🔍 基于法向量提取面..." << std::endl;
+                TopoDS_Shape extractedFaces = occHandler.extractFacesByNormal(direction, 5.0);
 
-            occHandler.printShapeStructure(extractedShells, TopAbs_FACE, std::cout, 0); // 打印形状结构，深度限制为4
+                if (extractedFaces.IsNull()) {
+                    QMessageBox::warning(this, "提取失败", "未能提取到任何面！");
+                    return;
+                }
 
-            std::cout << "✅ 面提取完成，已保存提取的shells用于后续处理" << std::endl;
+                std::cout << "📋 提取面的原始结构：" << std::endl;
+                occHandler.printShapeStructure(extractedFaces, TopAbs_SHELL, std::cout, 0);
 
-            vtkSmartPointer<vtkPolyData> poly = occHandler.shapeToPolyData(extractedShells);
+                // 第二步：自动进行遮挡裁剪
+                std::cout << "🔗 自动进行遮挡裁剪..." << std::endl;
+                // 使用更小的高度容差，更精确的分层
+                TopoDS_Shape processedShape = occHandler.removeOccludedPortions(extractedFaces, 1.0);
 
-            vtkViewer.setModel(poly, defaultOptions);
-            renderWindow->Render();
+                if (!processedShape.IsNull()) {
+                    // 使用遮挡裁剪后的结果
+                    extractedShells = processedShape;
+                    std::cout << "✅ 遮挡裁剪完成，最终结构：" << std::endl;
+                    occHandler.printShapeStructure(extractedShells, TopAbs_SHELL, std::cout, 0);
+                } else {
+                    // 如果裁剪失败，使用原始提取的面
+                    std::cout << "⚠️ 遮挡裁剪失败，使用原始提取的面" << std::endl;
+                    extractedShells = extractedFaces;
+                }
+
+                std::cout << "✅ 面提取和遮挡裁剪完成，已保存结果用于后续处理" << std::endl;
+
+                // 显示最终结果
+                vtkSmartPointer<vtkPolyData> poly = occHandler.shapeToPolyData(extractedShells);
+                if (poly && poly->GetNumberOfPoints() > 0) {
+                    vtkViewer.setModel(poly, defaultOptions);
+                    renderWindow->Render();
+                } else {
+                    QMessageBox::warning(this, "显示失败", "无法转换结果为可视化数据！");
+                }
+
+            } catch (const std::exception& e) {
+                QMessageBox::critical(this, "处理错误",
+                                    QString("面提取和合并过程中发生错误: %1").arg(e.what()));
+            } catch (...) {
+                QMessageBox::critical(this, "处理错误", "面提取和合并过程中发生未知错误");
+            }
         });
-
-
 
     connect(btnaddcutFaces, &QPushButton::clicked, this, [this]() {
         if (extractedShells.IsNull()) {
